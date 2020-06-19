@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/abdallahbedir/static/css/main.ca570863.chunk.css",
+    "main.js": "/abdallahbedir/static/js/main.d695b5dc.chunk.js",
+    "main.js.map": "/abdallahbedir/static/js/main.d695b5dc.chunk.js.map",
+    "runtime-main.js": "/abdallahbedir/static/js/runtime-main.dc12fbd1.js",
+    "runtime-main.js.map": "/abdallahbedir/static/js/runtime-main.dc12fbd1.js.map",
+    "static/js/2.9e0e8bd4.chunk.js": "/abdallahbedir/static/js/2.9e0e8bd4.chunk.js",
+    "static/js/2.9e0e8bd4.chunk.js.map": "/abdallahbedir/static/js/2.9e0e8bd4.chunk.js.map",
+    "index.html": "/abdallahbedir/index.html",
+    "precache-manifest.497d7088b5aa998a14e47b7f293027f3.js": "/abdallahbedir/precache-manifest.497d7088b5aa998a14e47b7f293027f3.js",
+    "service-worker.js": "/abdallahbedir/service-worker.js",
+    "static/css/main.ca570863.chunk.css.map": "/abdallahbedir/static/css/main.ca570863.chunk.css.map",
+    "static/js/2.9e0e8bd4.chunk.js.LICENSE.txt": "/abdallahbedir/static/js/2.9e0e8bd4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dc12fbd1.js",
+    "static/js/2.9e0e8bd4.chunk.js",
+    "static/css/main.ca570863.chunk.css",
+    "static/js/main.d695b5dc.chunk.js"
+  ]
+}
