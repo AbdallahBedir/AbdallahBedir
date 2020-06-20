@@ -7,7 +7,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 import Box from '../components/box';
-import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
 import Line from '../components/line';
 import { withStyles } from '@material-ui/core/styles';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
@@ -74,7 +74,7 @@ const styles = (theme) => ({
         transform: 'translateY(-50%)',
         width: '100%',
         textAlign: 'center',
-        transition:'all 0.2s ease-in-out',
+        transition:'all 0.2s ease-in-out'
     },
     resumeFooter:{
         position:'absolute',
@@ -87,9 +87,6 @@ const styles = (theme) => ({
         '& img':{
             marginRight:'6px'
         }
-    },
-    resumeStartIcon:{
-        marginRight:0
     }
 })
 
@@ -163,16 +160,15 @@ function About(props){
                 <div className="resume">
                     <div className={classes.resumeWrapper}>
                         <div className="backdrop">
-                            <div className={classes.resumeActions}>
-                                <Button type="submit" component="a" href='/resume.pdf' download 
-                                        className={classes.button} variant="contained" color="secondary" 
-                                        startIcon={<DownloadIcon />} title="Download"
-                                        classes={{startIcon:classes.resumeStartIcon}}>
-                                </Button>
-                                <Button type="submit" component="a" href='/resume.pdf' 
-                                        target="_blank" className={classes.button} variant="contained" 
-                                        color="secondary" startIcon={<PreviewIcon />} title="Preview"
-                                        classes={{startIcon:classes.resumeStartIcon}}></Button>
+                            <div className={classes.resumeActions}> 
+                                <IconButton aria-label="download resume" component="a"
+                                    href='/resume.pdf' download className={classes.button} title="Download">
+                                    <DownloadIcon />
+                                </IconButton>
+                                <IconButton aria-label="download resume" component="a"
+                                    href='/resume.pdf' target="_blank" className={classes.button} title="Preview">
+                                    <PreviewIcon />
+                                </IconButton>
                             </div>
                         </div>
                         <img className={classes.resumeImage} src="images/resume.png" alt="resume"/>
@@ -182,10 +178,6 @@ function About(props){
                         </div>
                     </div>
                 </div>
-                {/* <img src="images/resume.png" alt="resume" width="160"/>
-                <Button type="submit" component="a" href='/invoice_9.pdf' download className={classes.button} variant="contained"
-                 color="secondary" startIcon={<DownloadIcon />}>Download pdf</Button>
-                <Button type="submit" component="a" href='/invoice_9.pdf' target="_blank" className={classes.button} variant="outlined" startIcon={<PreviewIcon />}>Preview</Button> */}
             </Box>
         </section>
     )
