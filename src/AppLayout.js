@@ -18,7 +18,7 @@ import Zoom from '@material-ui/core/Zoom';
 const styles = (theme) => ({
     root:{},
     backdrop:{
-        backgroundImage:'url("/images/layout.jpg")',
+        backgroundImage:'url("images/layout.jpg")',
         height: '100vh',
         backgroundSize: '100% 100%;',
         backgroundAttachment: 'fixed',
