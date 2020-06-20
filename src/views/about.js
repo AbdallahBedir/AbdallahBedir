@@ -162,11 +162,11 @@ function About(props){
                         <div className="backdrop">
                             <div className={classes.resumeActions}> 
                                 <IconButton aria-label="download resume" component="a"
-                                    href='/resume.pdf' download className={classes.button} title="Download">
+                                    href='resume.pdf' download className={classes.button} title="Download">
                                     <DownloadIcon />
                                 </IconButton>
                                 <IconButton aria-label="download resume" component="a"
-                                    href='/resume.pdf' target="_blank" className={classes.button} title="Preview">
+                                    href='resume.pdf' target="_blank" className={classes.button} title="Preview">
                                     <PreviewIcon />
                                 </IconButton>
                             </div>
