@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Box from '../components/box';
-import { GitHub, LinkedIn,Code,Facebook } from '@material-ui/icons';
+import { GitHub, LinkedIn,Code,Facebook,LocationOn, Email,Phone } from '@material-ui/icons';
 import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -53,15 +54,33 @@ const styles = (theme) => ({
         fontSize: ['11px','!important'],
         letterSpacing:'0.5px'
     },
-    list:{
+    listItem:{
+        paddingTop:0,
+        paddingBottom:0
+    },
+    listItemText:{
+        fontFamily:theme.typography.fontFamilySecondary,
+        fontSize: '12px',
+        color: '#bebebe',
+        fontWeight: 500
+    },
+    listIcon:{
+        minWidth: '22px',
+        '& svg':{
+            fontSize: '1rem',
+            color:'#bebebe'
+        }
+    },
+    socialList:{
+        marginTop:theme.spacing(4),
         marginBottom:theme.spacing(4)
     },
-    link:{
+    socialLink:{
         width: 'auto',
         display: 'inline-flex',
         paddingRight: '10px'
     },
-    icon:{
+    socialIcon:{
         minWidth: '35px',
         color:theme.palette.text.secondary,
         transition:'color 0.25s ease-in-out',
@@ -118,7 +137,20 @@ function Contact(props){
             actions.setSubmitting(false);
         }, 2000);
     }
-
+    const contactInfo = [
+        {
+            icon:<LocationOn />,
+            text:'El Mahalla El Kubra, Egypt'
+        },
+        {
+            icon:<Email />,
+            text:'abdallahahmed2025@gmail.com'
+        },
+        {
+            icon:<Phone />,
+            text:'+201093196507'
+        }
+    ]
     const links = [
         {
             icon:<LinkedIn />,
@@ -148,15 +180,21 @@ function Contact(props){
                         <Typography variant="body2">
                             Please don’t hesitate to contact me for more information about my work. I am available Thursday , Fridays is a day of rest.
                         </Typography>
-                        <Typography variant="body2" className={classes.overline}>
-                            Email:
-                            abdallahahmed2025@gmail.com <br />
-                            Phone: +201093196507
-                        </Typography>
-                        <List className={classes.list} dense={true} disablePadding={true} component="div">
+                        <List dense={false} disablePadding={true}>
+                            {contactInfo.map((info,index) => (
+                                <ListItem key={index} disableGutters className={classes.listItem}>
+                                    <ListItemIcon className={classes.listIcon}>
+                                        {info.icon}
+                                    </ListItemIcon>
+                                    <ListItemText primary={info.text} classes={{ primary: classes.listItemText }}>
+                                    </ListItemText>
+                                </ListItem>
+                            ))}
+                        </List>
+                        <List className={classes.socialList} dense={true} disablePadding={true} component="div">
                             {links.map((link,index) => (
-                                <ListItem key={index} className={classes.link} component="a" href={link.url} target="_blank" disableGutters={true}>
-                                    <ListItemIcon className={classes.icon}>
+                                <ListItem key={index} className={classes.socialLink} component="a" href={link.url} target="_blank" disableGutters={true}>
+                                    <ListItemIcon className={classes.socialIcon}>
                                         {link.icon}
                                     </ListItemIcon>
                                 </ListItem>

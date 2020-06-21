@@ -91,7 +91,7 @@ function Skills(props){
                 {name:'Server side rendering(nuxt.js/next.js)',percentage:90},
                 {name:'Redux(react-redux/ngrx)',percentage:93},
                 {name:'Ionic4',percentage:95},
-                {name:'Test automation/Jest/Enzyme',percentage:90},
+                {name:'Automation Testing/Jest/Enzyme',percentage:90},
                 {name:'Angular Material/Material-UI',percentage:97},
                 {name:'HTML4/HTML5',percentage:97},
                 {name:'CSS3/SASS',percentage:94},
@@ -118,7 +118,7 @@ function Skills(props){
     {
         name:'beginner',
         skills:[
-            {name:'Photoshop',percentage:20},
+            {name:'Photoshop',percentage:25},
         ]
     }]
     return(
