@@ -47,19 +47,18 @@ class App extends React.Component {
   render(){
     return (
     <ThemeProvider theme={theme}>
-    <CssBaseline />
-    <GlobalCss />
-    <CSSTransition
-        in={this.state.mounted}
-        appear={true}
-        classNames="fade"
-        timeout={2000}
-      >
-        <div>
-        <AppLayout />
-        </div>
+      <CssBaseline />
+      <GlobalCss />
+      <CSSTransition
+          in={this.state.mounted}
+          appear={true}
+          classNames="fade"
+          timeout={2000}>
+          <div>
+          <AppLayout />
+          </div>
       </CSSTransition>
-  </ThemeProvider>
+    </ThemeProvider>
     )
   }
 }

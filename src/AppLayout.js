@@ -1,7 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// Material UI core
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Fab from '@material-ui/core/Fab';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Zoom from '@material-ui/core/Zoom';
+// Views
 import Sidebar from './views/sidebar';
 import Header from './views/header';
 import Skills from './views/skills';
@@ -9,16 +14,17 @@ import Works from './views/works';
 import About from './views/about';
 import Contact from './views/contact';
 import Copyright from './views/copyright';
+// React components
 import ScrollTo from './components/scroll-to';
-import Fab from '@material-ui/core/Fab';
+import layoutImg from './assets/imgs/layout.jpg';
+// Material UI icons
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Zoom from '@material-ui/core/Zoom';
+
 
 const styles = (theme) => ({
     root:{},
     backdrop:{
-        backgroundImage:'url("images/layout.jpg")',
+        backgroundImage:`url(${layoutImg})`,
         height: '100vh',
         backgroundSize: '100% 100%;',
         backgroundAttachment: 'fixed',

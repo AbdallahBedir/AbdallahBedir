@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// Material UI core
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Box from '../components/box';
 import { withStyles } from '@material-ui/core/styles';
+// React components
+import Box from '../components/box';
+import profilePhoto from '../assets/imgs/profile-photo.jpg';
 
 const styles = (theme) => ({
     root:{
@@ -39,7 +42,7 @@ function Header(props){
     return(
         <section id="header" className={classes.root}>
             <Box disableGutters>
-                <img className={classes.img} src="images/profile-photo.jpg" alt="Abdallah bedir"/>
+                <img className={classes.img} src={profilePhoto} alt="Abdallah bedir"/>
             </Box>
             <Box>
                 <Grid container className={classes.container}>

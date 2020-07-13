@@ -1,62 +1,67 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LivePreview from '../components/live-preview';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
-import Box from '../components/box';
+// Material UI core
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import { withStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
+// React components
+import LivePreview from '../components/live-preview';
+import Box from '../components/box';
+import Projects from '../config/projects';
+import Books from '../config/books';
+import Screens from '../config/screens';
 
 const ExpansionPanel = withStyles({
-    root: {
-      backgroundColor:'transparent',
-      boxShadow: 'none',
-      '&:not(:last-child)': {
-        borderBottom: 0,
-      },
-      '&:before': {
-        display: 'none',
-      },
-      '&$expanded': {
-        margin: 'auto',
-      },
+  root: {
+    backgroundColor:'transparent',
+    boxShadow: 'none',
+    '&:not(:last-child)': {
+      borderBottom: 0,
     },
-    expanded: {},
-  })(MuiExpansionPanel);
+    '&:before': {
+      display: 'none',
+    },
+    '&$expanded': {
+      margin: 'auto',
+    },
+  },
+  expanded: {},
+})(MuiExpansionPanel);
   
-  const ExpansionPanelSummary = withStyles(theme => ({
-    root: {
-      backgroundColor:theme.palette.secondary.main,
-      borderBottom: 'none',
+const ExpansionPanelSummary = withStyles(theme => ({
+  root: {
+    backgroundColor:theme.palette.secondary.main,
+    borderBottom: 'none',
+    minHeight: 40,
+    margin:theme.spacing(1,0),
+    borderRadius: '3px',
+    fontSize: '14px',
+    transition:'all 0.5s ease-in-out',
+    '&$expanded': {
       minHeight: 40,
-      margin:theme.spacing(1,0),
-      borderRadius: '3px',
-      fontSize: '14px',
-      transition:'all 0.5s ease-in-out',
-      '&$expanded': {
-        minHeight: 40,
-        backgroundColor:theme.palette.primary.main,
-      },
+      backgroundColor:theme.palette.primary.main,
     },
-    content: {
+  },
+  content: {
+    margin: '0',
+    '&$expanded': {
       margin: '0',
-      '&$expanded': {
-        margin: '0',
-      },
     },
-    expanded: {},
-  }))(MuiExpansionPanelSummary);
+  },
+  expanded: {},
+}))(MuiExpansionPanelSummary);
 
-  const ExpansionPanelDetails = withStyles((theme) => ({
+const ExpansionPanelDetails = withStyles((theme) => ({
     root: {
       backgroundColor: 'transparent',
       padding: theme.spacing(2 ,0),
       transition:'all 0.5s ease-in-out',
     },
-  }))(MuiExpansionPanelDetails);
+}))(MuiExpansionPanelDetails);
 
 const styles = (theme) => ({
     root:{
@@ -115,91 +120,11 @@ const styles = (theme) => ({
 
 function Works(props){
     const { classes } = props;
-    const screens = [
-      "lg-tablet.jpg",
-      "lg-xs.jpg",
-      "lg-xs-tablet.jpg",
-      "lg-xs-2.jpg"
-    ]
-    const books = [
-      "the-road-to-react.png",
-      "reactjs-notes-for-professional.png",
-      "web-development-with-mongoDB-and-nodeJS.jpg",
-      "ng-book.jpg",
-      "rangle.io.png"
-    ]
-    const projects = [
-      {
-        title:'E4SC',
-        img:'e4sc.png',
-        url:'http://www.e4sc.org/'
-      },
-      {
-        title:'PROPERTIESAPP',
-        img:'properties-app.png',
-        url:'https://abdallahbedir.github.io/propreties-app/'
-      },
-      {
-        title:'MEAN-STACK',
-        img:'mean.png',
-        url:'https://lit-wave-43120.herokuapp.com/'
-      },
-      {
-        title:'KHALIL GROUP',
-        img:'khalil-group.png',
-        url:'http://submariner-molly-81024.bitballoon.com/'
-      },
-      {
-        title:'AKLNEY',
-        img:'aklney.PNG',
-        url:'https://cdn.rawgit.com/AbdallahBedir/Aklney/master/index.html'
-      },
-      {
-        title:'TRIGGER',
-        img:'it.PNG',
-        url:'https://rawgit.com/AbdallahBedir/Trigger/master/index.html'
-      },
-      {
-        title:'SCREEN',
-        img:'screen.PNG',
-        url:'http://screen.bitballoon.com/'
-      },
-      {
-        title:'FASHION STORE',
-        img:'fashion-store.PNG',
-        url:'http://captain-eagle-87612.bitballoon.com/'
-      },
-      {
-        title:'SPACE INC.',
-        img:'space-inc.PNG',
-        url:'http://advocate-karina-48643.bitballoon.com/'
-      },
-      {
-        title:'TASMEN',
-        img:'tasmen.PNG',
-        url:'http://tasmen.bitballoon.com/'
-      },
-      {
-        title:'TALAT NAGRO',
-        img:'nagro.PNG',
-        url:'http://developer-plating-58674.bitballoon.com/'
-      },
-      {
-        title:'NEW USER',
-        img:'new-user.PNG',
-        url:'https://newuser.netlify.app/'
-      },
-      {
-        title:'VEGAS STUDIO',
-        img:'vegas.PNG',
-        url:'http://toll-collecter-zebra-68827.bitballoon.com/'
-      },
-      {
-        title:'CLASSIC',
-        img:'classic.PNG',
-        url:'http://myclassic.bitballoon.com/'
-      }
-    ]
+
+    const screens = Screens;
+    const books = Books;
+    const projects = Projects;
+
     return(
         <section id="works" className={classes.root}>
             <Box>
@@ -218,7 +143,7 @@ function Works(props){
                               <div className="project">
                                 <div className={classes.projectThumbnail}>
                                   <div className="backdrop" />
-                                  <img className={classes.image} src={'images/'+project.img} alt={project.title} height="145"/>
+                                  <img className={classes.image} src={project.img} alt={project.title} height="145"/>
                                   <LivePreview url={project.url} />
                                 </div>
                                 <Link className={classes.link} href={project.url} target="_blank" variant="body2" underline="none">
@@ -239,7 +164,7 @@ function Works(props){
                             {screens.map(imgUrl => (
                               <Grid item className={classes.item} sm={6} xs={6} key={imgUrl}>
                                 <div className="screen">
-                                  <img className={classes.image} src={'images/'+imgUrl} alt={imgUrl} height="202"/>
+                                  <img className={classes.image} src={imgUrl} alt={imgUrl} height="202"/>
                                 </div>                              
                               </Grid>
                             ))}
@@ -255,7 +180,7 @@ function Works(props){
                             {books.map(bookUrl => (
                               <Grid item className={classes.item} sm={4} xs={6} key={bookUrl}>
                                 <div className="screen">
-                                  <img className={classes.image} src={'images/'+bookUrl} alt={bookUrl} height="202"/>
+                                  <img className={classes.image} src={bookUrl} alt={bookUrl} height="202"/>
                                 </div>                              
                               </Grid>
                             ))}

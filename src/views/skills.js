@@ -94,7 +94,7 @@ function Skills(props){
                 {name:'Automation Testing/Jest/Enzyme',percentage:90},
                 {name:'Angular Material/Material-UI',percentage:97},
                 {name:'HTML4/HTML5',percentage:97},
-                {name:'CSS3/SASS',percentage:94},
+                {name:'CSS3/SASS/CSS Modules/Bem',percentage:94},
                 {name:'Webpack',percentage:92},
                 {name:'Jquery',percentage:98},
                 {name:<Link href="https://datatables.net/" color="inherit">datatables.net</Link>,percentage:97},

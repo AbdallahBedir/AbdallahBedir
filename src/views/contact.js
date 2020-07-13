@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Box from '../components/box';
-import { GitHub, LinkedIn,Code,Facebook,LocationOn, Email,Phone } from '@material-ui/icons';
+// Material UI icons
 import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -13,9 +10,13 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Snackbar from '@material-ui/core/Snackbar';
-import MuiAlert from '@material-ui/lab/Alert';
 import Grow from '@material-ui/core/Grow';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import MuiAlert from '@material-ui/lab/Alert';
+import Box from '../components/box';
 import { Formik, Form, ErrorMessage, useField } from 'formik';
+import { GitHub, LinkedIn,Code,Facebook,LocationOn, Email,Phone } from '@material-ui/icons';
 import * as Yup from 'yup';
 
 const WhiteTextField = withStyles({

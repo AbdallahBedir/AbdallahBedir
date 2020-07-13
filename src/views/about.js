@@ -1,19 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// Material UI core
 import Link from '@material-ui/core/Link';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
-import Box from '../components/box';
 import IconButton from '@material-ui/core/IconButton';
-import Line from '../components/line';
 import { withStyles } from '@material-ui/core/styles';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+// React Components
+import Box from '../components/box';
+import Line from '../components/line';
 import ScrollTo from '../components/scroll-to';
+// Material UI icons
 import DownloadIcon from '@material-ui/icons/GetApp';
 import PreviewIcon from '@material-ui/icons/Visibility';
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+// Assets
+import ResumeThumbnail from '../assets/imgs/resume.png';
+import PdfIcon from '../assets/imgs/pdf.png';
+import ResumePdf from '../assets/abdallahbedir-cv.pdf';
+
 
 const styles = (theme) => ({
     root:{
@@ -162,18 +170,18 @@ function About(props){
                         <div className="backdrop">
                             <div className={classes.resumeActions}> 
                                 <IconButton aria-label="download resume" component="a"
-                                    href='resume.pdf' download className={classes.button} title="Download">
+                                    href={ResumePdf} download className={classes.button} title="Download">
                                     <DownloadIcon />
                                 </IconButton>
                                 <IconButton aria-label="download resume" component="a"
-                                    href='resume.pdf' target="_blank" className={classes.button} title="Preview">
+                                    href={ResumePdf} target="_blank" className={classes.button} title="Preview">
                                     <PreviewIcon />
                                 </IconButton>
                             </div>
                         </div>
-                        <img className={classes.resumeImage} src="images/resume.png" alt="resume"/>
+                        <img className={classes.resumeImage} src={ResumeThumbnail} alt="resume"/>
                         <div className={classes.resumeFooter}>
-                            <img src="images/pdf.png" alt="pdf-icon" height="20"/>
+                            <img src={PdfIcon} alt="pdf-icon" height="20"/>
                             <label>resume.pdf</label>
                         </div>
                     </div>
