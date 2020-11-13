@@ -101,11 +101,18 @@ function About(props) {
   const { classes } = props;
   const employment = [
     <React.Fragment>
+      Senior Front end Developer at{" "}
+      <Link href="https://www.usytech.com/" target="_blank" color="textPrimary">
+        USYtech.
+      </Link>{" "}
+      2020.
+    </React.Fragment>,
+    <React.Fragment>
       Front end Developer at{" "}
       <Link href="https://b5digital.dk/" target="_blank" color="textPrimary">
         B5 digital.
       </Link>{" "}
-      2020.
+      2019.
     </React.Fragment>,
     <React.Fragment>
       Angular Developer at{" "}
@@ -151,7 +158,7 @@ function About(props) {
           <br />
           Well-versed in Javascript programming language including its
           frameworks like Angular,React and VueJs along with building cross
-          platform mobile apps in Ionic.
+          platform mobile apps in React-native and Ionic.
           <br />I have been worked on more than 35 projects but{" "}
           <ScrollTo sectionId="works">
             <Link color="textPrimary">those</Link>

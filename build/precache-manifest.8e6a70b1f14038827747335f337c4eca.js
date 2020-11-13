@@ -1,31 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "51500c3d56d3f77a07743f468983267c",
+    "revision": "12280cf7b03103cd8a08cf0ca893afda",
     "url": "./index.html"
   },
   {
-    "revision": "aac59352df5cf95bed09",
+    "revision": "82c84b2281d84f1f94af",
     "url": "./static/css/main.ca570863.chunk.css"
   },
   {
-    "revision": "a9702d92b957119c73f0",
-    "url": "./static/js/2.4e315f55.chunk.js"
+    "revision": "5c216184cf11267ee1a9",
+    "url": "./static/js/2.0639db3e.chunk.js"
   },
   {
     "revision": "e2896a34bc173bbd7b6d83453e91d5e1",
-    "url": "./static/js/2.4e315f55.chunk.js.LICENSE.txt"
+    "url": "./static/js/2.0639db3e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "aac59352df5cf95bed09",
-    "url": "./static/js/main.e0c272be.chunk.js"
+    "revision": "82c84b2281d84f1f94af",
+    "url": "./static/js/main.2d64fe52.chunk.js"
   },
   {
     "revision": "66c20c647bc5e262ede4",
     "url": "./static/js/runtime-main.023111e9.js"
   },
   {
-    "revision": "8250845675733a9c96f2bef12d2504b2",
-    "url": "./static/media/abdallahbedir-cv.82508456.pdf"
+    "revision": "77da96ee5c5b583fee9c7671cc568607",
+    "url": "./static/media/0E0M5W9O3V.77da96ee.jpg"
+  },
+  {
+    "revision": "551e4f03b8734191290850614da5347c",
+    "url": "./static/media/abdallahbedir-cv.551e4f03.pdf"
   },
   {
     "revision": "71f1da253ceb6c178fe7d07066e240a3",
@@ -92,10 +96,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/ng-book.88a02b4c.jpg"
   },
   {
-    "revision": "c40449458eb22d9f251f4387fb40377b",
-    "url": "./static/media/profile-photo.c4044945.jpg"
-  },
-  {
     "revision": "8a1502a38ef3ed61b44a667a95447c79",
     "url": "./static/media/properties-app.8a1502a3.png"
   },
@@ -104,8 +104,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/reactjs-notes-for-professional.8bb7bdbd.png"
   },
   {
-    "revision": "cbbe6b8a16c147fbb46e6807fe0fbc9d",
-    "url": "./static/media/resume.cbbe6b8a.png"
+    "revision": "1c13467abdbff4ec6119fd9e4c8400d0",
+    "url": "./static/media/resume.1c13467a.png"
   },
   {
     "revision": "44eb04d7f2846cd03e7e032ee10fc56f",
