@@ -1,10 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 import Box from "../components/box";
 import Line from "../components/line";
-import { withStyles } from "@material-ui/core/styles";
+import {
+  withStyles,
+  Theme,
+  createStyles,
+  WithStyles,
+} from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
 
 const progressHeight = {
@@ -38,51 +42,53 @@ const BorderLinearProgress = withStyles((theme) => ({
   },
 }))(LinearProgress);
 
-const styles = (theme) => ({
-  root: {
-    marginBottom: theme.spacing(10),
-  },
-  skill: {
-    marginBottom: theme.spacing(2),
-  },
-  caption: {
-    color: "#CCCCCC",
-    fontSize: "13px",
-  },
-  level: {
-    marginBottom: theme.spacing(1),
-    letterSpacing: "2px",
-    textTransform: "capitalize",
-    fontSize: "1.35rem",
-    fontWeight: 600,
-  },
-  progressWrapper: {
-    position: "relative",
-  },
-  progressLabel: {
-    position: "absolute",
-    color: "#fff",
-    zIndex: 3,
-    lineHeight: `${progressHeight.lg}px`,
-    fontWeight: 600,
-    fontSize: "15px",
-    [theme.breakpoints.up("xl")]: {
-      lineHeight: `${progressHeight.xl}px`,
+const styles = (theme: Theme) =>
+  createStyles({
+    root: {
+      marginBottom: theme.spacing(10),
     },
-    [theme.breakpoints.only("md")]: {
-      lineHeight: `${progressHeight.md}px`,
+    skill: {
+      marginBottom: theme.spacing(2),
     },
-    [theme.breakpoints.only("sm")]: {
-      lineHeight: `${progressHeight.sm}px`,
+    caption: {
+      color: "#CCCCCC",
+      fontSize: "13px",
     },
-    [theme.breakpoints.only("xs")]: {
-      lineHeight: `${progressHeight.xs}px`,
+    level: {
+      marginBottom: theme.spacing(1),
+      letterSpacing: "2px",
+      textTransform: "capitalize",
+      fontSize: "1.35rem",
+      fontWeight: 600,
     },
-  },
-});
+    progressWrapper: {
+      position: "relative",
+    },
+    progressLabel: {
+      position: "absolute",
+      color: "#fff",
+      zIndex: 3,
+      lineHeight: `${progressHeight.lg}px`,
+      fontWeight: 600,
+      fontSize: "15px",
+      [theme.breakpoints.up("xl")]: {
+        lineHeight: `${progressHeight.xl}px`,
+      },
+      [theme.breakpoints.only("md")]: {
+        lineHeight: `${progressHeight.md}px`,
+      },
+      [theme.breakpoints.only("sm")]: {
+        lineHeight: `${progressHeight.sm}px`,
+      },
+      [theme.breakpoints.only("xs")]: {
+        lineHeight: `${progressHeight.xs}px`,
+      },
+    },
+  });
 
-function Skills(props) {
-  const { classes } = props;
+interface Props extends WithStyles<typeof styles> {}
+
+const Skills: React.FC<Props> = ({ classes }) => {
   const levels = [
     {
       name: "professional",
@@ -185,10 +191,6 @@ function Skills(props) {
       </Box>
     </section>
   );
-}
-
-Skills.propTypes = {
-  classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(Skills);
