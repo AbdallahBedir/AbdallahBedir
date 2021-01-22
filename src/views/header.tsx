@@ -1,43 +1,48 @@
 import React from "react";
-import PropTypes from "prop-types";
 // Material UI core
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import { withStyles } from "@material-ui/core/styles";
+import {
+  withStyles,
+  createStyles,
+  Theme,
+  WithStyles,
+} from "@material-ui/core/styles";
 // React components
 import Box from "../components/box";
 import profilePhoto from "../assets/imgs/0E0M5W9O3V.jpg";
 
-const styles = (theme) => ({
-  root: {
-    fontFamily: [theme.typography.fontFamilySecondary, "!important"],
-    margin: theme.spacing(9, 0, 0),
-  },
-  container: {
-    marginTop: "-15px",
-  },
-  item: {
-    paddingRight: theme.spacing(2),
-  },
-  overline: {
-    marginBottom: theme.spacing(1),
-    fontFamily: theme.typography.fontFamilySecondary,
-    letterSpacing: "1px",
-  },
-  body2: {
-    [theme.breakpoints.up("sm")]: {
-      marginBottom: ["5px", "!important"],
+interface Props extends WithStyles<typeof styles> {}
+
+const styles = (theme: Theme) =>
+  createStyles({
+    root: {
+      fontFamily: `${theme.typography.fontFamilySecondary} !important`,
+      margin: theme.spacing(9, 0, 0),
     },
-  },
-  img: {
-    width: "100%",
-    filter: "saturate(0.5)",
-  },
-});
+    container: {
+      marginTop: "-15px",
+    },
+    item: {
+      paddingRight: theme.spacing(2),
+    },
+    overline: {
+      marginBottom: theme.spacing(1),
+      fontFamily: theme.typography.fontFamilySecondary,
+      letterSpacing: "1px",
+    },
+    body2: {
+      [theme.breakpoints.up("sm")]: {
+        marginBottom: ["5px", "!important"],
+      },
+    },
+    img: {
+      width: "100%",
+      filter: "saturate(0.5)",
+    },
+  });
 
-function Header(props) {
-  const { classes } = props;
-
+const Header: React.FC<Props> = ({ classes }) => {
   return (
     <section id="header" className={classes.root}>
       <Box disableGutters>
@@ -70,10 +75,6 @@ function Header(props) {
       </Box>
     </section>
   );
-}
-
-Header.propTypes = {
-  classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(Header);

@@ -88,7 +88,8 @@ function Skills(props) {
       name: "professional",
       skills: [
         { name: "GraphQl/ApolloGraphql", percentage: 92 },
-        { name: "React", percentage: 97 },
+        { name: "React.js", percentage: 97 },
+        { name: "Typescript", percentage: 94 },
         { name: "Angular9/VueJs", percentage: 96 },
         { name: "SSR/SSG(next.js/nuxt.js)", percentage: 95 },
         { name: "Redux(react-redux/ngrx)", percentage: 93 },
