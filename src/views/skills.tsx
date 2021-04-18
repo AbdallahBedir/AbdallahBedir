@@ -93,6 +93,7 @@ const Skills: React.FC<Props> = ({ classes }) => {
     {
       name: "professional",
       skills: [
+        { name: "DataStructure/Problem Solving", percentage: 90 },
         { name: "GraphQl/ApolloGraphql", percentage: 92 },
         { name: "React.js", percentage: 97 },
         { name: "Typescript", percentage: 94 },
